@@ -30,6 +30,16 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            /* Important: Ensure embedded content fills the placeholder */
+            position: relative; 
+        }
+        /* Style for iframes inside the placeholder to ensure they fit */
+        .video-placeholder iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         /* Mobile-first adjustment for stat numbers */
         @media (max-width: 640px) {
@@ -37,15 +47,20 @@
                 padding: 1rem 0; /* Adjust padding for mobile to save space */
             }
         }
-        /* Ensure the single long-form sample uses the correct 16:9 ratio */
+        /* Style for the 16:9 long-form video container */
         .long-form-placeholder {
              aspect-ratio: 16 / 9;
              background-color: #374151;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             text-align: center;
              width: 100%;
+             position: relative; /* Set to relative for absolute positioning of iframe */
+        }
+        /* New rule to ensure the long-form iframe fills the 16:9 container */
+        .long-form-placeholder iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -127,45 +142,64 @@
                 Below are samples demonstrating various styles, from quick-cut gaming to clean, professional vlogs.
             </p>
 
-            <!-- Short-Form Samples (4) -->
+            <!-- Short-Form Samples (3) -->
             <div class="mb-16">
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Short-Form Samples (Shorts/Reels)</h4>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Sample 1: Minecraft/Gaming -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Sample 1: Cinematic Professional Edit (TikTok Link) -->
+                    <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
+                        <a href="https://www.tiktok.com/@snu4zie/video/7551949595056557319" target="_blank" class="block group">
+                            <div class="video-placeholder rounded-lg mb-4 transition duration-300 group-hover:opacity-75 bg-blue-900/40">
+                                <p class="text-gray-300 text-center font-bold text-lg">CLICK TO WATCH TIKTOK</p>
+                            </div>
+                            <p class="text-lg font-semibold accent-color group-hover:text-blue-300 transition">Cinematic Professional Edit</p>
+                        </a>
+                        <p class="text-sm text-gray-400">Polished, clean, and cinematic editing, focusing on narrative build-up, demonstrating professional techniques like subtle zoom-ins and motion graphics.</p>
+                    </div>
+                    
+                    <!-- Sample 2: Viral Minecraft Meme (EMBEDDED VIDEO) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
                         <div class="video-placeholder rounded-lg mb-4">
-                            <p class="text-gray-300">Video Placeholder: Minecraft/Gaming Short</p>
+                            <!-- YouTube Embed for Viral Minecraft Meme -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/yEPcSlwYyiA" 
+                                title="Did You Do This ?🤔 #minecraft #shorts" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="w-full h-full"
+                            ></iframe>
                         </div>
-                        <p class="text-lg font-semibold accent-color">01. High-Energy Gaming</p>
-                        <p class="text-sm text-gray-400">Fast cuts, visual effects, and dynamic text overlays to maximize engagement for game highlights.</p>
+                        <!-- Link added around title and description for clickability -->
+                        <a href="https://www.youtube.com/shorts/yEPcSlwYyiA" target="_blank" class="group">
+                            <p class="text-lg font-semibold accent-color group-hover:text-blue-300 transition">Viral Minecraft Meme <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+                            <p class="text-sm text-gray-400">Expert timing of sound effects and audio cues with rapid transitions, creating highly shareable content optimized for comedic, meme-based virality.</p>
+                        </a>
                     </div>
 
-                    <!-- Sample 2: Meme/High Energy -->
+                    <!-- Sample 3: Engaging Minecraft Content (EMBEDDED VIDEO) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
                         <div class="video-placeholder rounded-lg mb-4">
-                            <p class="text-gray-300">Video Placeholder: Meme/High Energy Short</p>
+                            <!-- YouTube Embed for Engaging Minecraft Content -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/SIFsNeBypRk" 
+                                title="The Water SAVED Me At The End 😂 #minecraft #shorts" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="w-full h-full"
+                            ></iframe>
                         </div>
-                        <p class="text-lg font-semibold accent-color">02. Quick-Witted Meme Clip</p>
-                        <p class="text-sm text-gray-400">Perfect comedic timing, sound effects, and rapid transitions tailored for viral sharing.</p>
+                        <!-- Link added around title and description for clickability -->
+                        <a href="https://www.youtube.com/shorts/SIFsNeBypRk" target="_blank" class="group">
+                            <p class="text-lg font-semibold accent-color group-hover:text-blue-300 transition">Engaging Minecraft Content <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+                            <p class="text-sm text-gray-400">High-octane, reaction-based content featuring tight cuts, dramatic sound design, and on-screen text to maximize viewer retention in gaming clips.</p>
+                        </a>
                     </div>
-
-                    <!-- Sample 3: Clean TikTok/Ryan Trahan Style -->
-                    <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
-                        <div class="video-placeholder rounded-lg mb-4">
-                            <p class="text-gray-300">Video Placeholder: Clean Vlog Style Short</p>
-                        </div>
-                        <p class="text-lg font-semibold accent-color">03. Clean & Professional Vlog</p>
-                        <p class="text-sm text-gray-400">Polished, narrative-focused editing with subtle zoom-ins and B-roll integration (Ryan Trahan style).</p>
-                    </div>
-
-                    <!-- Sample 4: Actual Edit (Miles Morales Type) -->
-                    <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
-                        <div class="video-placeholder rounded-lg mb-4">
-                            <p class="text-gray-300">Video Placeholder: Cinematic/Action Edit</p>
-                        </div>
-                        <p class="text-lg font-semibold accent-color">04. Cinematic/Storytelling</p>
-                        <p class="text-sm text-gray-400">A demonstration of complex pacing, color grading, and soundtrack integration for an emotional impact.</p>
-                    </div>
+                    
                 </div>
             </div>
 
@@ -201,13 +235,23 @@
             <div class="mb-16 max-w-4xl mx-auto">
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Long-Form Video Sample</h4>
                 <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
-                    <div class="long-form-placeholder rounded-t-xl py-16">
-                         <!-- Placeholder for the YouTube embed iframe -->
-                        <p class="text-gray-300 text-2xl font-bold">Long-Form Placeholder: "My Recent Minecraft One" (Embed Link Here)</p>
+                    <div class="long-form-placeholder rounded-t-xl">
+                         <!-- YouTube Embed for Long-Form Content -->
+                        <iframe 
+                            src="https://www.youtube.com/embed/9fsGVwh0v_c" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen
+                        ></iframe>
                     </div>
                     <div class="p-6">
-                        <p class="text-xl font-bold accent-color">Project: Minecraft Series Feature</p>
-                        <p class="text-gray-400 mt-2">Demonstrates pacing, sound mixing, chapter marker insertion, and detailed color correction necessary for high-quality, sustainable long-form content.</p>
+                        <!-- Link added around title and description for clickability -->
+                        <a href="https://www.youtube.com/watch?v=9fsGVwh0v_c" target="_blank" class="group">
+                            <p class="text-xl font-bold accent-color group-hover:text-blue-300 transition">Project: Minecraft Series Feature <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+                            <p class="text-gray-400 mt-2">Demonstrates pacing, sound mixing, chapter marker insertion, and detailed color correction necessary for high-quality, sustainable long-form content.</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -328,6 +372,6 @@
             </div>
         </div>
     </section>
-
+    
 </body>
 </html>
