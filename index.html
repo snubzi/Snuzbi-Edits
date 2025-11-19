@@ -7,6 +7,8 @@
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
         /* Custom styles for a dark, professional aesthetic */
         body {
@@ -21,8 +23,8 @@
             background-color: #1f2937; /* Slightly lighter dark gray for cards */
         }
         .video-placeholder {
-            /* For short-form videos, use a 9:16 aspect ratio (portrait) */
-            aspect-ratio: 9 / 16; /* Changed for shorts */
+            /* Changed to 9:16 for short-form video examples */
+            aspect-ratio: 9 / 16; 
             background-color: #374151; /* Medium dark gray */
             display: flex;
             align-items: center;
@@ -34,6 +36,16 @@
             .stat-box {
                 padding: 1rem 0; /* Adjust padding for mobile to save space */
             }
+        }
+        /* Ensure the single long-form sample uses the correct 16:9 ratio */
+        .long-form-placeholder {
+             aspect-ratio: 16 / 9;
+             background-color: #374151;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             text-align: center;
+             width: 100%;
         }
     </style>
 </head>
@@ -189,18 +201,10 @@
             <div class="mb-16 max-w-4xl mx-auto">
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Long-Form Video Sample</h4>
                 <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
-                    <!-- The new YouTube embed code replaces the video-placeholder div -->
-                    <iframe 
-                        src="https://www.youtube.com/embed/9fsGVwh0v_c?si=ZVy8FVPrwphXTsM3" 
-                        title="YouTube video player" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen 
-                        class="w-full aspect-video rounded-t-xl"
-                    ></iframe>
-                    <!-- End of new embed code -->
-
+                    <div class="long-form-placeholder rounded-t-xl py-16">
+                         <!-- Placeholder for the YouTube embed iframe -->
+                        <p class="text-gray-300 text-2xl font-bold">Long-Form Placeholder: "My Recent Minecraft One" (Embed Link Here)</p>
+                    </div>
                     <div class="p-6">
                         <p class="text-xl font-bold accent-color">Project: Minecraft Series Feature</p>
                         <p class="text-gray-400 mt-2">Demonstrates pacing, sound mixing, chapter marker insertion, and detailed color correction necessary for high-quality, sustainable long-form content.</p>
@@ -293,8 +297,25 @@
             <a href="mailto:snubziedits@gmail.com" class="inline-block px-12 py-4 text-xl font-bold bg-green-600 hover:bg-green-700 text-white rounded-xl transition transform hover:scale-105 shadow-xl shadow-green-500/50">
                 Contact Snubzi Edits Today
             </a>
-            <p class="mt-8 text-lg text-gray-500">
-                Business Inquiries: <span class="font-mono text-gray-300">snubziedits@gmail.com</span>
+
+            <!-- Social Media Icon Bar -->
+            <div class="mt-8 flex justify-center space-x-8 text-3xl">
+                <a href="https://www.instagram.com/snubzi_edits/" target="_blank" class="text-gray-400 hover:text-pink-500 transition transform hover:scale-110" title="Instagram: @snubzi_edits">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@snuzbi.edits" target="_blank" class="text-gray-400 hover:text-gray-200 transition transform hover:scale-110" title="TikTok: @snuzbi.edits">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="https://discord.gg/SAJtXs46" target="_blank" class="text-gray-400 hover:text-indigo-400 transition transform hover:scale-110" title="Discord: Join Snubzi Edits Server">
+                    <i class="fab fa-discord"></i>
+                </a>
+                <a href="mailto:snubziedits@gmail.com" class="text-gray-400 hover:text-blue-400 transition transform hover:scale-110" title="Business Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+            <p class="mt-4 text-lg text-gray-500">
+                Direct Email: <span class="font-mono text-gray-300">snubziedits@gmail.com</span> | Discord Tag: <span class="font-mono text-gray-300">snubziedits_86892</span> (DM for quick questions)
             </p>
             
             <!-- Consolidated Disclaimer Added Here -->
