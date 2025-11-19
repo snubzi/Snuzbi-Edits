@@ -21,7 +21,8 @@
             background-color: #1f2937; /* Slightly lighter dark gray for cards */
         }
         .video-placeholder {
-            aspect-ratio: 16 / 9;
+            /* For short-form videos, use a 9:16 aspect ratio (portrait) */
+            aspect-ratio: 9 / 16; /* Changed for shorts */
             background-color: #374151; /* Medium dark gray */
             display: flex;
             align-items: center;
@@ -188,10 +189,18 @@
             <div class="mb-16 max-w-4xl mx-auto">
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Long-Form Video Sample</h4>
                 <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
-                    <div class="video-placeholder rounded-t-xl py-16">
-                         <!-- Replace this placeholder with an actual YouTube embed iframe of your long-form video -->
-                        <p class="text-gray-300 text-2xl font-bold">Long-Form Placeholder: "My Recent Minecraft One" (Embed Link Here)</p>
-                    </div>
+                    <!-- The new YouTube embed code replaces the video-placeholder div -->
+                    <iframe 
+                        src="https://www.youtube.com/embed/9fsGVwh0v_c?si=ZVy8FVPrwphXTsM3" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen 
+                        class="w-full aspect-video rounded-t-xl"
+                    ></iframe>
+                    <!-- End of new embed code -->
+
                     <div class="p-6">
                         <p class="text-xl font-bold accent-color">Project: Minecraft Series Feature</p>
                         <p class="text-gray-400 mt-2">Demonstrates pacing, sound mixing, chapter marker insertion, and detailed color correction necessary for high-quality, sustainable long-form content.</p>
