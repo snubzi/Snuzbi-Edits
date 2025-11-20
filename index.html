@@ -164,15 +164,25 @@
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Short-Form Samples (Shorts/Reels)</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    <!-- Sample 1: Cinematic Professional Edit (TikTok Link) -->
+                    <!-- Sample 1: Cinematic Professional Edit (EMBEDDED TIKTOK - UPDATED) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl p-4">
-                        <a href="https://www.tiktok.com/@snu4zie/video/7551949595056557319" target="_blank" class="block group">
-                            <div class="video-placeholder rounded-lg mb-4 transition duration-300 group-hover:opacity-75 bg-blue-900/40">
-                                <p class="text-gray-300 text-center font-bold text-lg">CLICK TO WATCH TIKTOK</p>
-                            </div>
-                            <p class="text-lg font-semibold accent-color group-hover:text-blue-300 transition">Cinematic Professional Edit</p>
+                        <div class="video-placeholder rounded-lg mb-4">
+                            <!-- TikTok Embed using iframe pointing to the dedicated embed URL -->
+                            <iframe 
+                                src="https://www.tiktok.com/embed/v2/7551949595056557319"
+                                title="Cinematic Professional Edit (Spiderman)" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="w-full h-full"
+                            ></iframe>
+                        </div>
+                         <!-- Link added around title and description for clickability -->
+                        <a href="https://www.tiktok.com/@snu4zie/video/7551949595056557319" target="_blank" class="group">
+                            <p class="text-lg font-semibold accent-color group-hover:text-blue-300 transition">Cinematic Professional Edit <i class="fas fa-external-link-alt text-xs ml-1"></i></p>
+                            <p class="text-sm text-gray-400">Polished, clean, and cinematic editing, focusing on narrative build-up, demonstrating professional techniques like subtle zoom-ins and motion graphics.</p>
                         </a>
-                        <p class="text-sm text-gray-400">Polished, clean, and cinematic editing, focusing on narrative build-up, demonstrating professional techniques like subtle zoom-ins and motion graphics.</p>
                     </div>
                     
                     <!-- Sample 2: Viral Minecraft Meme (EMBEDDED VIDEO) -->
@@ -246,10 +256,10 @@
                         </div>
                     </div>
                     
-                    <!-- Thumbnail 2: IRL/Vlog (LIVE EMBED - 16:9) - UPDATED -->
+                    <!-- Thumbnail 2: IRL/Vlog (LIVE EMBED - 16:9) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
                         <div class="long-form-placeholder rounded-t-xl">
-                            <!-- YouTube Embed for IRL / Face-Focused Thumbnail (New ID) -->
+                            <!-- YouTube Embed for IRL / Face-Focused Thumbnail -->
                             <iframe 
                                 src="https://www.youtube.com/embed/Akg5lIJTpMg?si=9q6CalaVnAuK1_D4" 
                                 title="IRL Content Sample" 
