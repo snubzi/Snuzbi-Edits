@@ -48,6 +48,7 @@
             }
         }
         /* Style for the 16:9 long-form video container */
+        /* Used for both long-form videos and 16:9 thumbnail embeds */
         .long-form-placeholder {
              aspect-ratio: 16 / 9;
              background-color: #374151;
@@ -62,18 +63,21 @@
             width: 100%;
             height: 100%;
         }
-        /* Styles for the thumbnail images */
+        /* Styles for the thumbnail containers */
         .thumbnail-img-container {
             aspect-ratio: 16 / 9; /* Standard YouTube thumbnail ratio */
             width: 100%;
             overflow: hidden;
-        }
-        .thumbnail-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures the image covers the container */
             border-top-left-radius: 0.75rem; /* rounded-xl equivalent */
             border-top-right-radius: 0.75rem; /* rounded-xl equivalent */
+            /* Ensure SVG/Image fills the container */
+            display: block;
+        }
+        /* Styles for the SVG placeholders */
+        .thumbnail-img-container svg {
+            width: 100%;
+            height: 100%;
+            display: block;
         }
     </style>
 </head>
@@ -221,35 +225,43 @@
                 <h4 class="text-3xl font-semibold mb-8 border-b border-gray-700 pb-3">Thumbnail Design Samples</h4>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     
-                    <!-- Thumbnail 1: Minecraft Gaming (Uses uploaded image: Skyblock 24 Hours.jpg) -->
+                    <!-- Thumbnail 1: Minecraft Gaming (LIVE EMBED - 16:9) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
-                        <div class="thumbnail-img-container">
-                            <!-- Now using the new Skyblock thumbnail -->
-                            <img 
-                                src="Skyblock 24 Hours.jpg" 
-                                alt="Minecraft Skyblock 24 Hour Challenge Thumbnail"
-                                onerror="this.onerror=null; this.src='https://placehold.co/800x450/3b82f6/ffffff?text=Minecraft+Challenge+Thumbnail+Placeholder'"
-                            >
+                        <!-- Reusing long-form-placeholder for 16:9 aspect ratio and responsiveness -->
+                        <div class="long-form-placeholder rounded-t-xl">
+                            <!-- YouTube Embed for Minecraft Challenge Thumbnail -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/fGtwlxBCv_8" 
+                                title="Minecraft Challenge Thumbnail" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="w-full h-full"
+                            ></iframe>
                         </div>
                         <div class="p-4">
-                            <!-- CHANGED TEXT HERE -->
-                            <p class="text-lg font-semibold accent-color">Minecraft Challenge Thumbnail</p>
-                            <p class="text-sm text-gray-400">High visibility, bold subject, and clear text overlay optimized for time-based challenge content.</p>
+                            <p class="text-lg font-semibold accent-color">Minecraft Challenge Thumbnail (Live Embed)</p>
+                            <p class="text-sm text-gray-400">High visibility, bold subject, and clear text overlay optimized for time-based challenge content. (Click play to see the thumbnail.)</p>
                         </div>
                     </div>
                     
-                    <!-- Thumbnail 2: IRL/Vlog (Uses uploaded image: Smaller big arrow.jpg) -->
+                    <!-- Thumbnail 2: IRL/Vlog (LIVE EMBED - 16:9) -->
                     <div class="bg-card rounded-xl overflow-hidden shadow-2xl">
-                        <div class="thumbnail-img-container">
-                             <!-- Remains the IRL/Vlog thumbnail -->
-                            <img 
-                                src="Smaller big arrow.jpg" 
-                                alt="IRL / Face-Focused Thumbnail Example"
-                                onerror="this.onerror=null; this.src='https://placehold.co/800x450/f59e0b/ffffff?text=Thumbnail+2+Placeholder'"
-                            >
+                        <div class="long-form-placeholder rounded-t-xl">
+                            <!-- YouTube Embed for IRL / Face-Focused Thumbnail -->
+                            <iframe 
+                                src="https://www.youtube.com/embed/fGtwlxBCv_8" 
+                                title="IRL / Face-Focused Thumbnail" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen
+                                class="w-full h-full"
+                            ></iframe>
                         </div>
                         <div class="p-4">
-                            <p class="text-lg font-semibold accent-color">IRL / Face-Focused Thumbnail</p>
+                            <p class="text-lg font-semibold accent-color">IRL / Face-Focused Thumbnail (Live Embed)</p>
                             <p class="text-sm text-gray-400">Clean design focusing on expression and narrative, optimized for mobile viewing.</p>
                         </div>
                     </div>
